@@ -3,7 +3,8 @@ const app = express();
 const cats = [
   {'Johny': 'black and white'}, 
   {'Zoey': 'red and white'},
-  {'Mitya': 'grey and black}];
+  {'Mitya': 'grey and black}
+   ];
    
  const PORT = process.env.PORT || 4001;
  // Use static server to serve the Express Yourself Website
