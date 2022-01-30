@@ -9,31 +9,16 @@ const cats = [
  // Use static server to serve the Express Yourself Website
  app.use(express.static('public'));
 
-
-
-
-
-
-const express = require('express');
-const app = express();
-const { seedElements } = require('./utils');
-
-// Serves Express Yourself website
-app.use(express.static('public'));
-
-const PORT = process.env.PORT || 4001;
-// Use static server to serve the Express Yourself Website
-app.use(express.static('public'));
-
-const expressions = [];
-seedElements(expressions, 'expressions');
-
-// Get all expressions
-app.get('/expressions', (req, res, next) => {
-  res.send(expressions);
-  // console.log(req);
+app.get = ('/cats',(req,res,next)=>{
+  res.send(cats);
 });
 
-app.listen(PORT, () => {
-  console.log(`Listening on port ${PORT}`);
+app.listen(PORT,()=>{
+  console.log(`Server is listening on ${PORT}`);
 });
+
+
+
+
+
+
